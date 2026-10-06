@@ -1,22 +1,70 @@
 ```javascript
-const startBtn = document.getElementById("startBtn");
+// EXPLORE BUTTON
 
-startBtn.addEventListener("click", function () {
+const exploreBtn = document.getElementById("exploreBtn");
 
-    alert("Welcome to GameZone! 🎮");
+exploreBtn.addEventListener("click", function () {
+
+    document.getElementById("games").scrollIntoView({
+        behavior: "smooth"
+    });
 
 });
 
 
-const gameButtons = document.querySelectorAll(".gameBtn");
+// DOWNLOAD BUTTONS
 
-gameButtons.forEach(function(button) {
+const downloadButtons = document.querySelectorAll(".downloadBtn");
 
-    button.addEventListener("click", function() {
+downloadButtons.forEach(function (button) {
 
-        alert("This game will be available soon! 🚀");
+    button.addEventListener("click", function () {
+
+        const gameLink = button.getAttribute("data-link");
+
+        window.open(gameLink, "_blank");
 
     });
+
+});
+
+
+// SIGN IN
+
+const signInBtn = document.getElementById("signInBtn");
+
+const loginOverlay = document.getElementById("loginOverlay");
+
+const closeBtn = document.getElementById("closeBtn");
+
+
+// OPEN LOGIN
+
+signInBtn.addEventListener("click", function () {
+
+    loginOverlay.style.display = "flex";
+
+});
+
+
+// CLOSE LOGIN
+
+closeBtn.addEventListener("click", function () {
+
+    loginOverlay.style.display = "none";
+
+});
+
+
+// LOGIN FORM
+
+const loginForm = document.getElementById("loginForm");
+
+loginForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    alert("Login interface works! 🎮");
 
 });
 ```

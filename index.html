@@ -1,4 +1,5 @@
 ```html
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,64 +14,194 @@
 
 <body>
 
+    <!-- HEADER -->
     <header>
+
         <h1>🎮 GameZone</h1>
 
         <nav>
             <a href="#">Home</a>
-            <a href="#">Games</a>
-            <a href="#">Contact</a>
+            <a href="#games">Games</a>
+            <a href="#contact">Contact</a>
+
+            <!-- SIGN IN -->
+            <button id="signInBtn" class="sign-in">
+                Sign In
+            </button>
         </nav>
+
     </header>
 
-    <main>
 
-        <section class="hero">
-            <h2>Welcome to GameZone</h2>
+    <!-- HERO -->
+    <section class="hero">
 
-            <p>
-                Discover amazing games and enjoy your gaming journey.
-            </p>
+        <div class="hero-text">
 
-            <button id="startBtn">Start Exploring</button>
-        </section>
+            <p>WELCOME TO</p>
 
-        <section class="games">
+            <h2>GAMEZONE</h2>
 
-            <h2>Popular Games</h2>
+            <h3>Your Favorite Games In One Place</h3>
 
-            <div class="cards">
+            <button id="exploreBtn">
+                Explore Games
+            </button>
 
-                <div class="card">
-                    <h3>Free Fire</h3>
-                    <p>Battle Royale game.</p>
-                    <button class="gameBtn">View Game</button>
+        </div>
+
+    </section>
+
+
+    <!-- GAMES -->
+    <section class="games" id="games">
+
+        <h2>🔥 Popular Games</h2>
+
+        <div class="cards">
+
+            <!-- MINECRAFT -->
+            <div class="card">
+
+                <div class="game-icon minecraft">
+                    ⛏️
                 </div>
 
-                <div class="card">
-                    <h3>Minecraft</h3>
-                    <p>Build your own world.</p>
-                    <button class="gameBtn">View Game</button>
-                </div>
+                <h3>Minecraft</h3>
 
-                <div class="card">
-                    <h3>Fortnite</h3>
-                    <p>Battle and build.</p>
-                    <button class="gameBtn">View Game</button>
-                </div>
+                <p>
+                    Build, explore and create your own world.
+                </p>
+
+                <button class="downloadBtn"
+                    data-link="https://play.google.com/store/apps/details?id=com.mojang.minecraftpe">
+                    Download
+                </button>
 
             </div>
 
-        </section>
 
-    </main>
+            <!-- FREE FIRE -->
+            <div class="card">
 
+                <div class="game-icon freefire">
+                    🔥
+                </div>
+
+                <h3>Free Fire</h3>
+
+                <p>
+                    Fight, survive and become the last player.
+                </p>
+
+                <button class="downloadBtn"
+                    data-link="https://play.google.com/store/apps/details?id=com.dts.freefireth">
+                    Download
+                </button>
+
+            </div>
+
+
+            <!-- FORTNITE -->
+            <div class="card">
+
+                <div class="game-icon fortnite">
+                    🎯
+                </div>
+
+                <h3>Fortnite</h3>
+
+                <p>
+                    Battle, build and have fun with your friends.
+                </p>
+
+                <button class="downloadBtn"
+                    data-link="https://play.google.com/store/apps/details?id=com.epicgames.fortnite">
+                    Download
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <h2>Need Help?</h2>
+
+        <p>Contact GameZone and discover more games.</p>
+
+    </section>
+
+
+    <!-- LOGIN WINDOW -->
+    <div class="login-overlay" id="loginOverlay">
+
+        <div class="login-box">
+
+            <!-- CLOSE -->
+            <button class="closeBtn" id="closeBtn">
+                ×
+            </button>
+
+            <h2>Welcome Back 👋</h2>
+
+            <p>Sign in to your GameZone account</p>
+
+
+            <form id="loginForm">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+
+                <button type="submit" class="login-button">
+                    Login
+                </button>
+
+            </form>
+
+
+            <p class="create-account">
+                Don't have an account?
+                <a href="#">Create account</a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
     <footer>
+
         <p>© 2026 GameZone</p>
+
     </footer>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
 ```
